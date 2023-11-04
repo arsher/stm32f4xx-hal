@@ -7,25 +7,36 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
-- complete and rework Dma Stream API [#666]
-- add `.set_count()` for QEI, add `.write_count()` for TIM [#677]
-- add "Fast start" section in README [#678]
+### Changed
+
+ - complete and rework Dma Stream API [#666]
  - SPI bidi takes 2 pins [#526]
+ - `Fast Read Quad I/O (EBh)` in `qspi-w25q` example now matches W25QXX datasheet. [#682]
+
+### Fixed
+
+ - fix serial RxN & TxN alises
+
+### Added
+
+-  add `.set_count()` for QEI, add `.write_count()` for TIM [#677]
+ - add "Fast start" section in README [#678]
 
 [#526]: https://github.com/stm32-rs/stm32f4xx-hal/pull/526
 [#666]: https://github.com/stm32-rs/stm32f4xx-hal/pull/666
 [#677]: https://github.com/stm32-rs/stm32f4xx-hal/pull/677
 [#678]: https://github.com/stm32-rs/stm32f4xx-hal/pull/678
+[#682]: https://github.com/stm32-rs/stm32f4xx-hal/pull/682
 
 ## [v0.17.1] - 2023-07-24
 
 ### Changed
 
-- implement `embedded_hal::blocking::i2c::Transactional` for `I2c` [#671]
+ - implement `embedded_hal::blocking::i2c::Transactional` for `I2c` [#671]
 
 ### Fixed
 
-- reset timer interrupt in `Counter::start` [#670]
+ - reset timer interrupt in `Counter::start` [#670]
 
 [#670]: https://github.com/stm32-rs/stm32f4xx-hal/pull/670
 [#671]: https://github.com/stm32-rs/stm32f4xx-hal/pull/671
