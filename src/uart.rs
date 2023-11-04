@@ -21,7 +21,7 @@ use crate::serial::uart_impls::RegisterBlockUart;
 pub use crate::serial::{config, Event, Instance, NoRx, NoTx, Rx, RxISR, Serial, Tx, TxISR};
 pub use config::Config;
 /// Serial error
-pub use embedded_hal_one::serial::ErrorKind as Error;
+pub use crate::serial::Error as Error;
 
 #[cfg(not(any(feature = "stm32f413", feature = "stm32f423",)))]
 macro_rules! halUart {
